@@ -1,4 +1,4 @@
-,station_id,stationame,month_beginning,avg_weekday_rides,avg_saturday_rides,avg_sunday-holiday_rides,monthtotal,line
+,station_id,stationame,month_beginning,avg_weekday_rides,avg_saturday_rides,avg_sunday_holiday_rides,monthtotal,line
 0,40900,Howard,01/01/2001,6233.9,3814.5,2408.6,164447,red
 1,41190,Jarvis,01/01/2001,1489.1,1054.0,718.0,40567,red
 2,40100,Morse,01/01/2001,4412.5,3064.5,2087.8,119772,red
