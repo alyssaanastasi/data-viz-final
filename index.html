@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <script src="//d3js.org/d3.v5.min.js"></script>
-</head>
+    <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script></head>
 <body>
 
 <div class="header-section"> 
@@ -15,25 +15,59 @@
     </div>
 </div>
 
-<div id="start">
-    <p> In this narrative visualization, we will be exploring trends in Chicago Transit Authority (CTA) rail line ridership.</p>
+<div id="start" class="start">
+    <h2>Introduction</h2>
+    <div class="start-content">
+    <p> 
+        In this narrative visualization, we will be exploring trends in Chicago Transit Authority (CTA) rail line ridership data.
+        As an introduction, the CTA consists of 8 distinct lines: Red, Green, Pink, Orange, Blue, Purple, Brown, and Yellow. 
+        From the CTA map on the left, we can see that the trains have a central location in The Loop of Chicago and spread into neighborhoods from there.
+        The blue, purple, brown, and yellow primarily serve the north sides of Chicago while the pink, orange, and green primarily serve the south sides of the city. 
+        The red line, which we will see is the most used CTA rail line, serves both the north and south sides of the city, spanning approximately 31 miles from north to south.
+        <br>
+        <br>
+        In June 2025, the CTA announced an almost $800 million funding deficit. 
+        If not addressed, this deficit could result in cutting services by 40% and even completely eliminating some bus and rail lines.
+        Depicted in the "doomsday scenario" on the right, we can see that the proposed cuts would primarily effect south side serving lines in the city. 
+        This proposal would completely cut the pink, orange, yellow, and purple lines, cut off the west stops of the blue line, and cut the south stops of the green line.
+        As a result of this, I wanted to tell a story exploring CTA ridership data to quantify the effect that these cuts would have on Chicagoans who rely on the CTA for daily transportation. 
+    </p>
+    <img src="ctamap.png" width="400" height="600">
+    <img src="worstcase.jpg" width="400" height="600">
+    </div>
 </div>
 
 <div id="overall-ridership">
     <h2>Overall CTA Ridership</h2>
-    <p> In this graph, we are looking</p>
 
 </div>
 <div id="line-ridership">
     <h2>CTA Ridership by Line</h2>
-    <p> In this graph, we are looking</p>
 </div>
 
-<div id="postcov-ridership">
-    <h2>Post-COVID CTA Ridership by Line</h2>
-    <p> In this graph, we are looking</p>
+<div id="cuts">
+    <h2>Impacts of Rail Line Cuts</h2>
 </div>
-<div id="explore"></div>
+
+<div id="explore" class="explore">
+    <h2>Explore CTA Data</h2>
+    <div class="dropdowns">
+        <div class="dropdown-set">
+        <p>Select a CTA Line to explore their trends </p>
+            <select id="line-select">
+                <option value="">Select a CTA Line</option>
+            </select>
+        </div>
+        <div class="dropdown-set">
+        <p>Select any year to explore their trends </p>
+            <select id="year-select">
+                <option value="">Select a Year</option>
+            </select>
+        </div>
+    </div>
+</div>
+        
+
 
 <script src="script.js"> </script>
 <script>
