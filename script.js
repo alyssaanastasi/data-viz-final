@@ -489,7 +489,12 @@ async function init(){
 
     // drop downs
     var linesList = Array.from(new Set(data.map(d => d.line)));
+    console.log(linesList)
+    console.log(JSON.stringify(linesList[0]));
+
     var lineSelect = d3.select("#line-select");
+    
+    lineSelect.selectAll("option").remove();
     lineSelect.selectAll("option")
         .data(linesList)
         .enter().append("option")
@@ -498,6 +503,7 @@ async function init(){
 
     var yearList = Array.from(new Set(filteredData.map(d => d.month_beginning.getFullYear())));
     var yearSelect = d3.select("#year-select");
+    yearSelect.selectAll("option").remove();
     yearSelect.selectAll("option")
         .data(yearList)
         .enter().append("option")
