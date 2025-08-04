@@ -595,6 +595,29 @@ async function init(){
             .attr("stroke-width", 1.5)
             .attr("transform", `translate(${margin.left},${margin.top})`)
             .attr("d", line);
+
+        // max peak annotation
+        var currMax = d3.max(filtered, d => d.monthtotal);
+        var currPeak = filtered.find(d => d.monthtotal == currMax);
+
+        const filterAnnotations = [
+        {
+            note: {
+            label: "Ridership peaked at " + currMax.toLocaleString() + " monthly riders in " + formatDate(currPeak.month_beginning)
+            },
+            x: margin.left + x(currPeak.month_beginning),
+            y: margin.top + y(currPeak.monthtotal),
+            dy: 200,
+            dx: 10,
+            color: "black"
+        }]
+
+        const makefilterAnnotations = d3.annotation()
+        .annotations(filterAnnotations)
+    
+        svg4.append("g")
+            .call(makefilterAnnotations);
+
         }
 
 
